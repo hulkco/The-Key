@@ -1,4 +1,4 @@
-(pcb "/home/greynaga/Documents/Proyectos/KiCad/ESP12-Break-Complete/ESP12-Break-02.dsn"
+(pcb "/home/greynaga/git/The_Key/Breakout/ESP12-Break-02.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -74,7 +74,7 @@
     (component Capacitors_SMD:C_0805_HandSoldering
       (place C1 140589 -96032 front 90 (PN 1uF))
       (place C3 143891 -96032 front 270 (PN 10uF))
-      (place C4 135128 -76454 front 270 (PN 1uF))
+      (place C4 135128 -76454 front 270 (PN 0.1uF))
     )
     (component Resistors_SMD:R_0805_HandSoldering
       (place R1 145542 -83312 front 90 (PN 10k))
@@ -96,16 +96,18 @@
       (place J3 151130 -69088 back 0 (PN GS2))
     )
     (component "OSHwi:D_SOD-123"
-      (place D1 144653 -102235 front 90 (PN MBR120))
+      (place D1 144653 -102235 front 90 (PN MBR120LSFT1G))
       (place D2 150114 -76454 front 90 (PN 1N4148))
       (place D3 131699 -76454 front 90 (PN 1N4148))
     )
-    (component "OSHwi:SW_SPST_B3U-1000P"
-      (place RESET 141351 -83312 front 90 (PN Switch))
-      (place PROG 141351 -89789 front 90 (PN Switch))
-    )
     (component OSHwi:WS2812B
-      (place LED1 140970 -76454 front 0 (PN WS2812B))
+      (place LED1 140970 -76454 front 0 (PN "LED-RGB-WS2812B-4SMD"))
+    )
+    (component "OSHwi:SW_SPST_B3U-1000P"
+      (place RESET1 141478 -83439 front 90 (PN Switch))
+    )
+    (component "OSHwi:SW_SPST_B3U-1000P::1"
+      (place USER/PROG1 141478 -89916 front 270 (PN Switch))
     )
   )
   (library
@@ -317,33 +319,6 @@
       (pin Rect[T]Pad_900x1200_um 1 -1650 0)
       (pin Rect[T]Pad_900x1200_um 2 1650 0)
     )
-    (image "OSHwi:SW_SPST_B3U-1000P"
-      (outline (path signal 50  -2400 -1650  2400 -1650))
-      (outline (path signal 50  2400 -1650  2400 1650))
-      (outline (path signal 50  2400 1650  -2400 1650))
-      (outline (path signal 50  -2400 1650  -2400 -1650))
-      (outline (path signal 120  -1650 -1100  -1650 -1400))
-      (outline (path signal 120  -1650 -1400  1650 -1400))
-      (outline (path signal 120  1650 -1400  1650 -1100))
-      (outline (path signal 120  -1650 1100  -1650 1400))
-      (outline (path signal 120  -1650 1400  1650 1400))
-      (outline (path signal 120  1650 1400  1650 1100))
-      (outline (path signal 100  -1500 1250  1500 1250))
-      (outline (path signal 100  1500 1250  1500 -1250))
-      (outline (path signal 100  1500 -1250  -1500 -1250))
-      (outline (path signal 100  -1500 -1250  -1500 1250))
-      (outline (path signal 100  750 0  738.606 -130.236  704.769 -256.515  649.519 -375
-            574.533 -482.091  482.091 -574.533  375 -649.519  256.515 -704.769
-            130.236 -738.606  0 -750  -130.236 -738.606  -256.515 -704.769
-            -375 -649.519  -482.091 -574.533  -574.533 -482.091  -649.519 -375
-            -704.769 -256.515  -738.606 -130.236  -750 0  -738.606 130.236
-            -704.769 256.515  -649.519 375  -574.533 482.091  -482.091 574.533
-            -375 649.519  -256.515 704.769  -130.236 738.606  0 750  130.236 738.606
-            256.515 704.769  375 649.519  482.091 574.533  574.533 482.091
-            649.519 375  704.769 256.515  738.606 130.236  750 0))
-      (pin Rect[T]Pad_900x1700_um 1 -1700 0)
-      (pin Rect[T]Pad_900x1700_um 2 1700 0)
-    )
     (image OSHwi:WS2812B
       (outline (path signal 46.4  2413 -3048  3810 -1143))
       (outline (path signal 50  2608.11 -1650  2605.71 -1677.46  2598.58 -1704.08  2586.93 -1729.06
@@ -369,6 +344,60 @@
       (pin Rect[T]Pad_1800x1200_um 2 2438.4 1651)
       (pin Rect[T]Pad_1800x1200_um 3 -2438.4 1651)
       (pin Rect[T]Pad_1800x1200_um 4 -2438.4 -1651)
+    )
+    (image "OSHwi:SW_SPST_B3U-1000P"
+      (outline (path signal 100  750 0  738.606 -130.236  704.769 -256.515  649.519 -375
+            574.533 -482.091  482.091 -574.533  375 -649.519  256.515 -704.769
+            130.236 -738.606  0 -750  -130.236 -738.606  -256.515 -704.769
+            -375 -649.519  -482.091 -574.533  -574.533 -482.091  -649.519 -375
+            -704.769 -256.515  -738.606 -130.236  -750 0  -738.606 130.236
+            -704.769 256.515  -649.519 375  -574.533 482.091  -482.091 574.533
+            -375 649.519  -256.515 704.769  -130.236 738.606  0 750  130.236 738.606
+            256.515 704.769  375 649.519  482.091 574.533  574.533 482.091
+            649.519 375  704.769 256.515  738.606 130.236  750 0))
+      (outline (path signal 100  -1500 -1250  -1500 1250))
+      (outline (path signal 100  1500 -1250  -1500 -1250))
+      (outline (path signal 100  1500 1250  1500 -1250))
+      (outline (path signal 100  -1500 1250  1500 1250))
+      (outline (path signal 120  1650 1400  1650 1100))
+      (outline (path signal 120  -1650 1400  1650 1400))
+      (outline (path signal 120  -1650 1100  -1650 1400))
+      (outline (path signal 120  1650 -1400  1650 -1100))
+      (outline (path signal 120  -1650 -1400  1650 -1400))
+      (outline (path signal 120  -1650 -1100  -1650 -1400))
+      (outline (path signal 50  -2400 1650  -2400 -1650))
+      (outline (path signal 50  2400 1650  -2400 1650))
+      (outline (path signal 50  2400 -1650  2400 1650))
+      (outline (path signal 50  -2400 -1650  2400 -1650))
+      (pin Rect[T]Pad_900x1700_um 2 1700 0)
+      (pin Rect[T]Pad_900x1700_um 1 -1700 0)
+    )
+    (image "OSHwi:SW_SPST_B3U-1000P::1"
+      (outline (path signal 50  -2400 -1650  2400 -1650))
+      (outline (path signal 50  2400 -1650  2400 1650))
+      (outline (path signal 50  2400 1650  -2400 1650))
+      (outline (path signal 50  -2400 1650  -2400 -1650))
+      (outline (path signal 120  -1650 -1100  -1650 -1400))
+      (outline (path signal 120  -1650 -1400  1650 -1400))
+      (outline (path signal 120  1650 -1400  1650 -1100))
+      (outline (path signal 120  -1650 1100  -1650 1400))
+      (outline (path signal 120  -1650 1400  1650 1400))
+      (outline (path signal 120  1650 1400  1650 1100))
+      (outline (path signal 100  -1500 1250  1500 1250))
+      (outline (path signal 100  1500 1250  1500 -1250))
+      (outline (path signal 100  1500 -1250  -1500 -1250))
+      (outline (path signal 100  -1500 -1250  -1500 1250))
+      (outline (path signal 100  750 0  738.606 -130.236  704.769 -256.515  649.519 -375
+            574.533 -482.091  482.091 -574.533  375 -649.519  256.515 -704.769
+            130.236 -738.606  0 -750  -130.236 -738.606  -256.515 -704.769
+            -375 -649.519  -482.091 -574.533  -574.533 -482.091  -649.519 -375
+            -704.769 -256.515  -738.606 -130.236  -750 0  -738.606 130.236
+            -704.769 256.515  -649.519 375  -574.533 482.091  -482.091 574.533
+            -375 649.519  -256.515 704.769  -130.236 738.606  0 750  130.236 738.606
+            256.515 704.769  375 649.519  482.091 574.533  574.533 482.091
+            649.519 375  704.769 256.515  738.606 130.236  750 0))
+      (pin Rect[T]Pad_900x1700_um 1 -1700 0)
+      (pin Rect[T]Pad_900x1700_um 2 1700 0)
     )
     (padstack Oval[T][600,0]Pad_2500x1100_um
       (shape (path F.Cu 1100  -100 0  1300 0))
@@ -447,7 +476,7 @@
       (pins U1-8 C1-1 R1-1 R2-2 R3-2 U2-5 C3-1 R6-1 C4-1 LED1-3)
     )
     (net /GND
-      (pins J2-8 U1-9 C1-2 U2-2 C2-2 C3-2 R7-1 RESET-2 PROG-2 C4-2 LED1-1)
+      (pins J2-8 U1-9 C1-2 U2-2 C2-2 C3-2 R7-1 C4-2 LED1-1 RESET1-2 USER/PROG1-2)
     )
     (net /GPIO15
       (pins J2-7 U1-10 J3-2 R7-2)
@@ -456,7 +485,7 @@
       (pins J2-6 U1-11 R6-2 LED1-2)
     )
     (net /GPIO0
-      (pins J2-5 U1-12 R2-1 PROG-1)
+      (pins J2-5 U1-12)
     )
     (net /GPIO4
       (pins J2-4 U1-13)
@@ -486,7 +515,7 @@
       (pins J1-1 D2-1)
     )
     (net /RESET
-      (pins U1-1 R3-1 J3-1 D2-2 RESET-1)
+      (pins U1-1 R3-1 J3-1 D2-2 RESET1-1)
     )
     (net /RXD_5V
       (pins J2-2 D3-1)
@@ -494,7 +523,10 @@
     (net "Net-(LED1-Pad4)"
       (pins LED1-4)
     )
-    (class kicad_default "" /3.3V /ADC /CH_PD /GND /GPIO0 /GPIO12 /GPIO13
+    (net /GPIO
+      (pins R2-1 USER/PROG1-1)
+    )
+    (class kicad_default "" /3.3V /ADC /CH_PD /GND /GPIO /GPIO0 /GPIO12 /GPIO13
       /GPIO14 /GPIO15 /GPIO16 /GPIO2 /GPIO4 /GPIO5 /RESET /RESET_5V /RXD /RXD_5V
       /TXD /VIN "Net-(C2-Pad1)" "Net-(LED1-Pad4)" "Net-(R5-Pad2)" "Net-(U2-Pad4)"
       (circuit
