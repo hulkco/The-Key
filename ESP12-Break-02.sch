@@ -161,13 +161,11 @@ F 3 "" H 9775 4475 50  0001 C CNN
 	1    9775 4475
 	-1   0    0    1   
 $EndComp
-Text Label 9775 4275 2    60   ~ 0
+Text Label 9650 4175 2    60   ~ 0
 GPIO15
 Text Label 3225 4550 0    60   ~ 0
 RESET
-Text Label 9175 2150 2    60   ~ 0
-GND
-Text Label 9775 4675 2    60   ~ 0
+Text Label 10000 4725 0    60   ~ 0
 RESET
 $Comp
 L regul:AP2127K-3.3 U2
@@ -213,10 +211,6 @@ F 3 "" H 8550 1825 50  0001 C CNN
 	1    8550 1825
 	1    0    0    -1  
 $EndComp
-Text Label 9800 2050 2    60   ~ 0
-GND
-Text Label 7925 2050 2    60   ~ 0
-GND
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 59E3C5A0
@@ -316,7 +310,7 @@ F 3 "" H 10250 1825 50  0001 C CNN
 	1    10250 1825
 	1    0    0    -1  
 $EndComp
-Text Label 10250 2050 2    60   ~ 0
+Text Label 9175 2425 2    60   ~ 0
 GND
 Text Label 10250 1425 0    60   ~ 0
 3.3V
@@ -467,12 +461,6 @@ Wire Wire Line
 Wire Wire Line
 	8875 2050 8875 1725
 Wire Wire Line
-	9175 2025 9175 2150
-Wire Wire Line
-	9800 1975 9800 2050
-Wire Wire Line
-	7925 1975 7925 2050
-Wire Wire Line
 	6675 1175 6675 1275
 Wire Wire Line
 	7925 1675 7925 1625
@@ -505,8 +493,6 @@ Wire Wire Line
 	1775 6500 1775 6575
 Wire Wire Line
 	10250 1425 10250 1625
-Wire Wire Line
-	10250 1975 10250 2050
 Connection ~ 10250 1625
 Wire Wire Line
 	9800 1625 9800 1675
@@ -594,8 +580,34 @@ Wire Wire Line
 	3275 6975 3475 6975
 Text Notes 6175 4150 0    60   ~ 0
 NEOPIXEL
-Text Notes 9450 4100 0    60   ~ 0
+Text Notes 9475 3850 0    60   ~ 0
 DEEP SLEEP
 Wire Notes Line
 	6300 450  6300 3350
+Wire Wire Line
+	9775 4275 9775 4175
+Wire Wire Line
+	9775 4175 9650 4175
+Wire Wire Line
+	9775 4675 9775 4725
+Wire Wire Line
+	9775 4725 10000 4725
+Wire Wire Line
+	7925 2225 9175 2225
+Wire Wire Line
+	7925 1975 7925 2225
+Wire Wire Line
+	10250 1975 10250 2225
+Wire Wire Line
+	9800 1975 9800 2225
+Connection ~ 9800 2225
+Wire Wire Line
+	9800 2225 10250 2225
+Wire Wire Line
+	9175 2025 9175 2225
+Connection ~ 9175 2225
+Wire Wire Line
+	9175 2225 9800 2225
+Wire Wire Line
+	9175 2425 9175 2225
 $EndSCHEMATC
