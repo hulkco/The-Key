@@ -1,0 +1,95 @@
+
+(rules PCB ESP12-Break-02
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 2001)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.5)
+    )
+  )
+  (rule
+    (width 406.0)
+    (clear 152.6)
+    (clear 76.2 (type smd_to_turn_gap))
+    (clear 38.2 (type smd_smd))
+  )
+  (padstack "Via[0-1]_685.8:330.2_um"
+    (shape
+      (circle F.Cu 685.8 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 685.8 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um-Power" "Via[0-1]_685.8:330.2_um" Power
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um" "Via[0-1]_685.8:330.2_um" default
+  )
+  (via 
+    "Via[0-1]_685.8:330.2_um-kicad_default" "Via[0-1]_685.8:330.2_um" "kicad_default"
+  )
+  (via_rule
+    Power "Via[0-1]_685.8:330.2_um-Power"
+  )
+  (via_rule
+    default "Via[0-1]_685.8:330.2_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_685.8:330.2_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 406.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    /ADC "/CH_PD" /GPIO16 /GPIO14 /GPIO12 /GPIO13 /GPIO15 /GPIO2
+    /GPIO0 /GPIO4 /GPIO5 /RXD /TXD "Net-(U2-Pad4)" "Net-(C2-Pad1)" /VIN
+    "Net-(R5-Pad2)" "/RESET_5V" /RESET "/RXD_5V" "Net-(LED1-Pad4)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 406.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    /GND /3.3V
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 609.6)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
