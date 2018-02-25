@@ -109,6 +109,10 @@
     (component "OSHwi:SW_SPST_B3U-1000P::1"
       (place USER/PROG1 141478 -89916 front 270 (PN Switch))
     )
+    (component "varios:OSHpark-1-2000"
+      (place G3*** 135890 -50800 back 0 (PN LOGO3))
+      (place G2*** 142875 -51435 back 0 (PN LOGO2))
+    )
   )
   (library
     (image Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm_SMD_Pin1Left
@@ -398,6 +402,8 @@
             649.519 375  704.769 256.515  738.606 130.236  750 0))
       (pin Rect[T]Pad_900x1700_um 1 -1700 0)
       (pin Rect[T]Pad_900x1700_um 2 1700 0)
+    )
+    (image "varios:OSHpark-1-2000"
     )
     (padstack Oval[T][600,0]Pad_2500x1100_um
       (shape (path F.Cu 1100  -100 0  1300 0))

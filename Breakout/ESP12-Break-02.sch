@@ -5,11 +5,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "The Key ESP8266 Breakout/Badge Board"
+Date "2018-02-24"
+Rev "2"
+Comp "MazMaker"
+Comment1 "Gustavo Reynaga"
 Comment2 ""
 Comment3 ""
 Comment4 ""

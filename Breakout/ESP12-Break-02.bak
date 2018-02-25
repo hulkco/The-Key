@@ -5,11 +5,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "The Key ESP8266 Breakout/Badge Board"
+Date "2018-02-24"
+Rev "2"
+Comp "MazMaker"
+Comment1 "Gustavo Reynaga"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -255,10 +255,10 @@ POWER & FILTERING
 Text Notes 5950 3700 0    60   ~ 0
 BUTTONS & LEDS
 $Comp
-L icezum:Switch SW1
+L icezum:Switch RESET1
 U 1 1 5A90CF8A
 P 2625 4550
-F 0 "SW1" H 2925 4775 60  0000 L BNN
+F 0 "RESET1" H 2875 4800 60  0000 L BNN
 F 1 "Switch" H 2850 4375 60  0000 L BNN
 F 2 "OSHwi:SW_SPST_B3U-1000P" H 2625 4550 60  0001 C CNN
 F 3 "" H 2625 4550 60  0000 C CNN
@@ -530,8 +530,6 @@ Wire Wire Line
 Connection ~ 2925 4550
 Wire Wire Line
 	2925 4550 2625 4550
-Text Notes 2075 4175 0    60   ~ 0
-RESET
 $Comp
 L device:R R2
 U 1 1 5A9260AC
@@ -548,10 +546,10 @@ Text Label 3025 5300 0    60   ~ 0
 Text Label 3250 5600 0    60   ~ 0
 GPIO
 $Comp
-L icezum:Switch SW2
+L icezum:Switch USER/PROG1
 U 1 1 5A9260B4
 P 2650 5600
-F 0 "SW2" H 2950 5825 60  0000 L BNN
+F 0 "USER/PROG1" H 2775 5800 60  0000 L BNN
 F 1 "Switch" H 2875 5425 60  0000 L BNN
 F 2 "OSHwi:SW_SPST_B3U-1000P" H 2650 5600 60  0001 C CNN
 F 3 "" H 2650 5600 60  0000 C CNN
@@ -569,8 +567,6 @@ Wire Wire Line
 Connection ~ 2950 5600
 Wire Wire Line
 	2950 5600 2650 5600
-Text Notes 1950 5225 0    60   ~ 0
-USER/PROG
 Connection ~ 5200 4525
 Wire Wire Line
 	1775 6975 1900 6975
